@@ -1,5 +1,8 @@
+if(!require(Wiki)){
+  devtools::install_github("arreen/wiki", build_vignettes = TRUE)
+}
+
 #devtools::install_github("arreen/wiki", build_vignettes = TRUE)
-#install.packages("shiny")
 library(Wiki)
 library(shiny)
 library(stringr)
