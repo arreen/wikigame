@@ -132,7 +132,14 @@ server <- function(input, output) {
     
     if (current_article() == "Poland") {
       rep("Poland", 48)
-    } else{Wiki::parse_data(api_data(), lan = names(langs)[which(input$lan == langs)])$related_topics}
+    } else{
+      
+      
+      topics <-  Wiki::parse_data(api_data(), lan = names(langs)[which(input$lan == langs)])$related_topics
+      topics[!str_detect(topics, ":")]
+      
+      
+      }
     
     
   })
