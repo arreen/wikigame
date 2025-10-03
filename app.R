@@ -47,10 +47,9 @@ ui <- fluidPage(
 
 
 server <- function(input, output) {
-  
-  #init_article <- sample(Wiki::women_in_statistics, 1)
-  
-  init_article <- sample(Wiki::women_in_statistics[, 1], 1)
+
+  init_article <- "1928_United_States_presidential_election_in_Connecticut"
+  #init_article <- sample(Wiki::women_in_statistics[, 1], 1)
   
   current_article <- reactiveVal(init_article)
   
